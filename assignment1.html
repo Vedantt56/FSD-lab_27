@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container2{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(49, 48, 50);
+            max-width: 500px;
+            margin: auto;
+            margin-top: 30px;
+    }
+    .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(49, 48, 50);
+            max-width: 500px;
+            margin: auto;
+    }
+    #but{
+        background-color: rgb(154, 209, 209);
+        border-radius: 7px;
+    }
+</style>
+<body>
+
+<div class ="container">
+    <div class="shopping-cart">
+        <H1>ONLINE SHOPPING </H1>         
+    </div>
+    <div class="items" id="items">
+           <label>Rice   :  500</label><br>
+           <label>Tea    :  200</label><br>
+           <label>Coffee :   800</label><br>
+           <label>Sugar  :    1000</label><br>
+           <label>Protien:  3000</label>
+    </div>
+    <button id="but" onclick="buyitem()">Buy Items</button>
+</div>
+<div class="container2">
+    <div class ="CART"><h1>CART ITEM</h1></div>
+</div>
+<script>
+        const items={
+            Rice: 500,
+            Tea: 200,
+            Coffee:800,
+            Sugar:1000,
+            Protien:3000
+        }
+
+        
+        function buyitem(){
+            let a = prompt("enter item to buy");
+            let b = prompt("enter quantity");
+            let price = Number(b)*items[a];
+            alert("toatl price is : "+ price);
+            
+        }
+    </script>
+</body>
+</head>
+</html>
